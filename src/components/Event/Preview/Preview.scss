@@ -1,0 +1,63 @@
+@import "../../../vars.scss";
+
+.date {
+  font: Aeonik;
+  margin: 10px 50px 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.type {
+  margin-top: 0px;
+  font: Aeonik;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.head {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $blue-sporteasy;
+  width: 100%;
+  flex-direction: column;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: white;
+  width: 100%;
+  flex-direction: column;
+}
+
+.time {
+  font: Aeonik;
+  color: $black;
+  font-size: 14px;
+}
+
+.score {
+  margin: 8px;
+  padding: 0px 60px 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: $almost-grey;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  font-size: $font-large;
+}
+
+.green {
+  color: $green;
+}
+
+
+.red {
+  color: $red;
+}
