@@ -5,6 +5,7 @@ import { MembersTable } from "./MembersTable/MembersTable";
 import { Preview } from "./Preview/Preview";
 import { EventType } from "../../api/types";
 import { Profile } from "./Profile/Profile";
+import { EventCard } from "./EventCard/EventCard";
 
 export const Event = () => {
   const [infos, setInfos] = useState<EventType>();
@@ -26,6 +27,8 @@ export const Event = () => {
         </div>
         <div className="grid-item">
           {infos && <Profile profile={infos.profile} />}
+          {infos && <EventCard event={infos.last_event} />}
+          {infos && <EventCard event={infos.next_event} />}
         </div>
       </div>
     </div>

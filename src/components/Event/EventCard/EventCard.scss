@@ -1,0 +1,45 @@
+@import "../../../vars.scss";
+
+.event {
+  padding: 24px;
+  background: white;
+  margin-top: $margin-medium;
+  border: 1px solid $light-grey;
+}
+
+hr {
+  color: $almost-grey;
+}
+
+.event-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.event-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.event-team-name {
+  font-size: 14px;
+  flex: 1;
+  text-align: left;
+}
+
+.event-team-score {
+  padding: 0 $margin-small 0;
+  background: $almost-grey;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+}
+
+.event-team-score.win {
+  color: $green;
+}
+
+.event-team-score.lose {
+  color: $red;
+}
