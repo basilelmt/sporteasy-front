@@ -4,6 +4,7 @@ import axios from 'axios';
 import { MembersTable } from "./MembersTable/MembersTable";
 import { Preview } from "./Preview/Preview";
 import { EventType } from "../../api/types";
+import { Profile } from "./Profile/Profile";
 
 export const Event = () => {
   const [infos, setInfos] = useState<EventType>();
@@ -22,6 +23,9 @@ export const Event = () => {
         <div className="grid-item">
           {infos && <Preview event={infos.event_detail} />}
           {infos && <MembersTable attendees={infos.attendees} />}
+        </div>
+        <div className="grid-item">
+          {infos && <Profile profile={infos.profile} />}
         </div>
       </div>
     </div>

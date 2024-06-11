@@ -1,0 +1,37 @@
+@import "../../../vars.scss";
+
+.profile {
+  margin-top: $margin-medium;
+  background: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid $light-grey;
+}
+
+.profile>* {
+  margin-top: 5px;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  text-align: center;
+  height: 90px;
+  margin: auto;
+}
+
+.name {
+  font-weight: bold;
+  padding-top: $margin-large;
+}
+
+.email {
+  color: $medium-grey;
+  font-size: $font-default;
+}
+
+.number {
+  color: $medium-grey;
+  font-size: $font-default;
+}
