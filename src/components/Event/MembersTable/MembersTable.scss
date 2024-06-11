@@ -1,0 +1,64 @@
+@import "../../../vars.scss";
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid #DADFE6;
+  border-collapse: collapse;
+  color: #8C929A;
+}
+
+.avatar {
+  border-radius: 50%;
+  text-align: center;
+  height: 32px;
+  width: 32px;
+  margin: auto;
+}
+
+th {
+  border-bottom: 1px solid #DADFE6;
+  background: $almost-grey;
+  color: #8C929A;
+  font-size: 14px;
+  padding: $margin-small;
+}
+
+td {
+  border-bottom: 1px solid #DADFE6;
+  color: $black;
+  vertical-align: middle;
+  padding: $margin-small;
+}
+
+.wrapper {
+  margin-top: $margin-medium;
+  background: white;
+  padding: 30px;
+  border: 1px solid $light-grey;
+}
+
+
+.green-bg,
+.red-bg {
+  border-radius: 50px;
+  text-align: center;
+  padding: $margin-small;
+  width: 80px;
+  margin: auto;
+}
+
+.green-bg {
+  background: $light-green;
+  /* Light green background */
+}
+
+.red-bg {
+  background: $light-red;
+  /* Light red background */
+}
+
+td.status-cell {
+  text-align: center;
+  vertical-align: middle;
+}

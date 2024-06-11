@@ -1,6 +1,7 @@
 import "./Event.scss";
 import { useState, useEffect } from 'react'
 import axios from 'axios';
+import { MembersTable } from "./MembersTable/MembersTable";
 import { Preview } from "./Preview/Preview";
 import { EventType } from "../../api/types";
 
@@ -20,6 +21,7 @@ export const Event = () => {
       <div className="grid-container">
         <div className="grid-item">
           {infos && <Preview event={infos.event_detail} />}
+          {infos && <MembersTable attendees={infos.attendees} />}
         </div>
       </div>
     </div>
