@@ -13,7 +13,7 @@ export const Preview = ({ event }: PreviewProps) => {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
-  }).format(new Date(event.date));
+  }).format(new Date(event.date)); // "2023-06-20" -> "mardi 20 juin 2023"
 
   return (
     <>

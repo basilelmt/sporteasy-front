@@ -13,9 +13,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 80% 20%;
-  /* Deux colonnes de largeur égale */
   gap: 10px;
-  /* Espace entre les colonnes */
 }
 
 .grid-item {

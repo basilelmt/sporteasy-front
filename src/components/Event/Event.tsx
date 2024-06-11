@@ -1,9 +1,10 @@
 import "./Event.scss";
 import { useState, useEffect } from 'react'
 import axios from 'axios';
+import { EventType } from "../../api/types";
+
 import { MembersTable } from "./MembersTable/MembersTable";
 import { Preview } from "./Preview/Preview";
-import { EventType } from "../../api/types";
 import { Profile } from "./Profile/Profile";
 import { EventCard } from "./EventCard/EventCard";
 
