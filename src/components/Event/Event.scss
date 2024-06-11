@@ -1,7 +1,25 @@
 @import "../../vars.scss";
 
-.event-container {
-  padding: $margin-large;
+* {
+  box-sizing: border-box;
+}
+
+.main-title {
+  color: $blue-sporteasy;
+  font-weight: bold;
+  font-size: $font-large;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  /* Deux colonnes de largeur égale */
+  gap: 10px;
+  /* Espace entre les colonnes */
+}
+
+.grid-item {
+  padding-right: $margin-small;
 }
 
 .title {

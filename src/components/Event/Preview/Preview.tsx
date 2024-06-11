@@ -1,19 +1,24 @@
 import "./Preview.scss";
-import { EventType } from '../../../api/types';
+import { EventDetailType } from '../../../api/types';
 
 interface PreviewProps {
-  infos: EventType;
+  event: EventDetailType;
 }
 
-export const Preview = ({ infos }: PreviewProps) => {
-  const event = infos.event_detail;
+export const Preview = ({ event }: PreviewProps) => {
   const lscore = event.left_team.score ?? 0
   const rscore = event.right_team.score ?? 0
+  const formatedDate = new Intl.DateTimeFormat('fr-FR', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(new Date(event.date));
 
   return (
     <>
       <div className="head">
-        <p className="date">{event.date}</p>
+        <p className="date">{formatedDate}</p>
         <p className="type">{event.type}</p>
       </div>
       <div className="body">
@@ -22,10 +27,15 @@ export const Preview = ({ infos }: PreviewProps) => {
           <br />
           Fin du match: {event.end_at}
         </p>
+
         <div className="score">
-          <span className={lscore > rscore ? "green" : "red"}>{lscore}</span>
-          &nbsp;-&nbsp;
-          <span className={rscore > lscore ? "green" : "red"}>{rscore}</span>
+          <div className="team-score">{event.left_team.name}</div>
+          <div className="vals">
+            <span className={lscore > rscore ? "green" : "red"}>{lscore}</span>
+            &nbsp;-&nbsp;
+            <span className={rscore > lscore ? "green" : "red"}>{rscore}</span>
+          </div>
+          <div className="team-score">{event.right_team.name}</div>
         </div>
       </div>
     </>
